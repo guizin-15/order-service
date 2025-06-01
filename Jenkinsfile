@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        SERVICE = 'order-service'
+        SERVICE = 'order'
         NAME = "loquinze/${env.SERVICE}"
     }
     stages {
         stage('Dependencies') {
             steps {
-                build job: 'product-service', wait: true
+                build job: 'product', wait: true
             }
         }
         stage('Build') { 
