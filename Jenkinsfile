@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         SERVICE = 'order'
-        NAME = "guizin-15/${env.SERVICE}"
+        NAME = "loquinze/${env.SERVICE}"
     }
     stages {
         stage('Dependencies') {
